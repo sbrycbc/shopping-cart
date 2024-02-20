@@ -22,7 +22,7 @@ export function Navbar() {
           <Button
             onClick={openCart}
             style={{ width: "3rem", height: "3rem", position: "relative" }}
-            variant="outline-primary"
+            variant="outline-secondary"
             className="rounded-circle"
           >
             <svg
@@ -34,7 +34,7 @@ export function Navbar() {
             </svg>
 
             <div
-              className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
+              className="rounded-circle bg-dark d-flex justify-content-center align-items-center"
               style={{
                 color: "white",
                 width: "1.5rem",

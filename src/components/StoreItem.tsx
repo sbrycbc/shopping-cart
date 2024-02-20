@@ -33,7 +33,7 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+            <Button variant="secondary" className="w-100" onClick={() => increaseCartQuantity(id)}>
               + Add To Cart
             </Button>
           ) : (
@@ -45,16 +45,17 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
                 className="d-flex align-items-center justify-content-center"
                 style={{ gap: ".5rem" }}
               >
-                <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                <Button variant="secondary" style={{ backgroundColor:'rgb(255, 192, 205)', fontSize:"1rem", height:"35px", width:"30px"}} onClick={() => decreaseCartQuantity(id)}>-</Button>
                 <div>
-                  <span className="fs-3">{quantity}</span> in cart
+                  <span className="fs-4" >{quantity}</span> in cart
                 </div>
-                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
+                <Button variant="secondary" style={{ backgroundColor:'rgb(255, 192, 205)', fontSize:".9rem", height:"35px", width:"30px"}}  onClick={() => increaseCartQuantity(id)}>+</Button>
               </div>
               <Button
                 onClick={() => removeFromCart(id)}
-                variant="danger"
+                variant="dark"
                 size="sm"
+                className="w-100"
               >
                 Remove
               </Button>

@@ -34,7 +34,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
       </div>
       <div> {formatCurrency(item.price * quantity)}</div>
       <Button
-        variant="outline-danger"
+        variant="outline-dark"
         size="sm"
         onClick={() => removeFromCart(item.id)}
       >
