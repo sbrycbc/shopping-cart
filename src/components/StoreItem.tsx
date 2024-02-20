@@ -1,13 +1,13 @@
-import { Button, Card } from "react-bootstrap";
-import { formatCurrency } from "../utilities/formatCurrency";
-import { useShoppingCart } from "../context/ShoppingCartContext";
+import { Button, Card } from "react-bootstrap"
+import { useShoppingCart } from "../context/ShoppingCartContext"
+import { formatCurrency } from "../utilities/formatCurrency"
 
 type StoreItemProps = {
-  id: number;
-  name: string;
-  price: number;
-  imgUrl: string;
-};
+  id: number
+  name: string
+  price: number
+  imgUrl: string
+}
 
 export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
   const {
@@ -33,29 +33,35 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
         </Card.Title>
         <div className="mt-auto">
           {quantity === 0 ? (
-            <Button className="w-100" onClick={() => increaseCartQuantity(id)}
-                    variant="secondary">+ Add To Card</Button>
+            <Button className="w-100" onClick={() => increaseCartQuantity(id)}>
+              + Add To Cart
+            </Button>
           ) : (
             <div
               className="d-flex align-items-center flex-column"
               style={{ gap: ".5rem" }}
             >
               <div
-                className="d-flex align-items-center flex-column"
+                className="d-flex align-items-center justify-content-center"
                 style={{ gap: ".5rem" }}
               >
-               <Button variant="secondary" onClick={() => decreaseCartQuantity(id)}>-</Button>
-               <div>
-                <span className="fs-3">{quantity}</span> in cart
+                <Button onClick={() => decreaseCartQuantity(id)}>-</Button>
+                <div>
+                  <span className="fs-3">{quantity}</span> in cart
                 </div>
-               <Button variant="secondary" onClick={() => increaseCartQuantity(id)}>+</Button>
-
+                <Button onClick={() => increaseCartQuantity(id)}>+</Button>
               </div>
-              <Button onClick={() => removeFromCart(id)} variant="danger">Remove</Button>
+              <Button
+                onClick={() => removeFromCart(id)}
+                variant="danger"
+                size="sm"
+              >
+                Remove
+              </Button>
             </div>
           )}
         </div>
       </Card.Body>
     </Card>
-  );
+  )
 }
