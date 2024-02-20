@@ -22,5 +22,17 @@
       "name": "Car",
       "price": 14000,
       "imgUrl": "/imgs/car.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Table",
+      "price": 10.05,
+      "imgUrl": "/imgs/table.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Urlaub",
+      "price": 1100,
+      "imgUrl": "/imgs/urlaub.jpg"
     }
   ]
